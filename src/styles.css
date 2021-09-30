@@ -1,0 +1,29 @@
+/* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.bg-main {
+  background-color: #24D2C0;
+}
+
+.bg-second {
+  background-color: #ECECEC;
+}
+
+.bg-accent {
+  background-color: #D3E4E3;
+}
+
+.font-main {
+  color: #24D2C0;
+}
+
+.font-strong {
+  color: #246C74;
+}
+
+.border-btm-primary {
+  border-bottom: #24D2C0 1px solid;
+}
+

@@ -1,0 +1,122 @@
+{
+  "cuentas": [
+    {
+      "id": 1,
+      "email": "test@gmail.com",
+      "password": "123456789",
+      "tipo": "cliente"
+    },
+    {
+      "email": "aria_sharifi@hotmail.com",
+      "password": "123456789",
+      "id": 2
+    },
+    {
+      "email": "arix123@gmail.com",
+      "password": "12345678912",
+      "id": 3
+    },
+    {
+      "email": "test@gmail.com",
+      "password": "123456789",
+      "id": 4
+    },
+    {
+      "email": "test@gmail.com",
+      "password": "123456789",
+      "id": 5
+    },
+    {
+      "email": "test@gmail.com",
+      "password": "123456789",
+      "id": 6
+    },
+    {
+      "email": "test@gmail.com",
+      "password": "123456789",
+      "id": 7
+    },
+    {
+      "email": "test@gmail.com",
+      "password": "123456789",
+      "id": 8
+    },
+    {
+      "email": "aria_sharifi@hotmail.com",
+      "password": "1234567890",
+      "id": 9
+    },
+    {
+      "email": "aria_sharifi@hotmail.com",
+      "password": "123456789",
+      "id": 10
+    },
+    {
+      "email": "aria_sharifi@hotmail.com",
+      "password": "1234567658645856",
+      "id": 11
+    },
+    {
+      "email": "aria_sharifi@hotmail.com",
+      "password": "1234567823",
+      "tipo": "cliente",
+      "id": 12
+    },
+    {
+      "email": "tecnicoTest@gmail.com",
+      "password": "tecnicojaja12345",
+      "tipo": "cliente",
+      "id": 13
+    },
+    {
+      "email": "tecnico@gmail.com",
+      "password": "1234561324124",
+      "tipo": "cliente",
+      "id": 14
+    },
+    {
+      "email": "aria_sharifi@hotmail.com",
+      "password": "1313111113131313133113",
+      "tipo": "cliente",
+      "id": 15
+    },
+    {
+      "email": "aria_sharifi@hotmail.com",
+      "password": "13213123123131231",
+      "tipo": "cliente",
+      "id": 16
+    },
+    {
+      "email": "aria_sharifi@hotmail.com",
+      "password": "131312312312132132123123123",
+      "tipo": "cliente",
+      "id": 17
+    },
+    {
+      "email": "qeqeqeqeqw@gmail.com",
+      "password": "13123213123213211312123",
+      "tipo": "cliente",
+      "id": 18
+    },
+    {
+      "email": "qeqeqeqeqw@gmail.com",
+      "password": "13123213123213211312123",
+      "id": 19
+    },
+    {
+      "email": "aria_sharifi@hotmail.com",
+      "password": "1234567658645856",
+      "id": 20
+    },
+    {
+      "email": "tecnicoTest@gmail.com",
+      "password": "tecnicojaja12345",
+      "id": 21
+    },
+    {
+      "email": "aria_sharifi@hotmail.com",
+      "password": "1234567823",
+      "id": 22
+    }
+  ]
+}
