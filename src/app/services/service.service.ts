@@ -21,27 +21,22 @@ export class ServiceService {
     this.httpOptions = httpDataService.httpOptions;
   }
 
-  // Get Service by Id
   getServiceById(id: any): Observable<Service> {
     return this.http.get<Service>(`${this.basePath}services/${id}`, this.httpOptions )
       .pipe(retry(2), catchError(this.handleError));
   }
-  // Create Lessor
   createService(item: any): Observable<Service> {
     return this.http.post<Service>(`${this.basePath}lessors`, JSON.stringify(item), this.httpOptions)
       .pipe(retry(2), catchError(this.handleError));
   }
-  // Get Lessor Data
   getList(): Observable<Service>{
     return this.http.get<Service>(`${this.basePath}services`)
       .pipe(retry(2), catchError(this.handleError));
   }
-  // Update Lessor
   updateService(id: any, item: any): Observable<Service>{
     return this.http.put<Service>(`${this.basePath}lessors/${id}`, JSON.stringify(item), this.httpOptions)
       .pipe(retry(2), catchError(this.handleError));
   }
-  // Delete Lessor
   deleteService(id: any): Observable<any> {
     return this.http.delete<Service>(`${this.basePath}lessors/${id}`, this.httpOptions)
       .pipe(retry(2), catchError(this.handleError));
