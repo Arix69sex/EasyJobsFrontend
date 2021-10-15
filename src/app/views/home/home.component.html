@@ -1,10 +1,13 @@
 <body class="w-full h-screen bg-second flex flex-col items-center">
-  <input class="w-4/12 mt-4 mb-4 rounded-md border border-gray-200 shadow-lg"
-         formControlName="search"
-         type="search"
-         placeholder="Search"
-         >
-  <div class="w-full h-screen grid grid-cols-3 grid-flow-row">
+  <form [formGroup]="searchForm" class="w-full flex flex-col justify-center items-center justify-self-center mx-auto">
+    <input class="w-4/12 h- mt-4 mb-4 rounded-md border border-gray-200 shadow-lg"
+           formControlName="searchValue"
+           type="search"
+           placeholder="Search"
+    >
+  </form>
+  <h1 class="text-4xl text-xl text-center mt-20 font-strong" *ngIf="servicesAvailable() == false">No technicians available at the moment :(</h1>
+  <div class="w-full h-screen grid grid-cols-3 grid-flow-row" *ngIf="servicesAvailable() == true">
     <div class="w-2/3 h-1/4 bg-white rounded-md shadow-lg mx-auto flex flex-row">
 
     </div>

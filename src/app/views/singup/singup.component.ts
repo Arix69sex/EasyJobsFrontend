@@ -1,10 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import {Router} from "@angular/router";
-import {Cuenta} from "../../models/cuenta";
 import {FormBuilder, FormGroup, Validators} from "@angular/forms";
 import {AuthService} from "../../services/auth.service";
 import {TokenService} from "../../services/token.service";
-import {CuentaService} from "../../services/cuenta.service";
+import {UserService} from "../../services/user.service";
 
 @Component({
   selector: 'app-singup',
@@ -21,7 +20,7 @@ export class SingupComponent implements OnInit {
 
   constructor(private router: Router,
               private formBuilder: FormBuilder,
-              private cuentaService: CuentaService,
+              private userService: UserService,
               private authService: AuthService,
               private tokenService: TokenService
               ) { }
@@ -30,7 +29,6 @@ export class SingupComponent implements OnInit {
     this.signupForm = this.formBuilder.group({
       email: ['', [Validators.email, Validators.required, Validators.minLength(6)]],
       password: ['', [Validators.required, Validators.minLength(6)]],
-      type: ['', [Validators.required]]
     });
   }
 

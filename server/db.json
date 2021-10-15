@@ -1,5 +1,15 @@
 {
   "cuentas": [
-
+    {
+      "email": "testuser1234@gmail.com",
+      "password": "123132132313131231321",
+      "tipo": "cliente",
+      "id": 1
+    },
+    {
+      "email": "testuser1234@gmail.com",
+      "password": "123132132313131231321",
+      "id": 2
+    }
   ]
 }

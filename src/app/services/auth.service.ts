@@ -1,14 +1,13 @@
 import { Injectable } from '@angular/core';
 import {HttpClient, HttpHeaders} from "@angular/common/http";
 import {Observable} from "rxjs";
-import {Cuenta} from "../models/cuenta";
 
-// const AUTH_API = 'https://easy-jobs-backend.herokuapp.com/swagger-ui/index.html?configUrl=/easyJobs-api-docs/swagger-config#/';
-const AUTH_API = 'http://localhost:8080/swagger-ui/index.html?configUrl=/easyJobs-api-docs/swagger-config#/';
+const AUTH_API = 'http://localhost:8080/';
 const httpOptions = {
-  headers: new HttpHeaders({
-    'Content-Type': 'application/json'
-  })
+  headers: new HttpHeaders()
+    .set('Content-Type', 'application/json')
+    .set('Access-Control-Allow-Origin', '*')
+    .set('Allow', ['GET', 'POST', 'PUT', 'DELETE'])
 };
 
 @Injectable({
@@ -20,18 +19,18 @@ export class AuthService {
   constructor(private http: HttpClient) { }
 
   login(credentials: { email: any; password: any; }): Observable<any> {
-    return this.http.post(AUTH_API+ 'cuentas', {
+    return this.http.post(AUTH_API+ 'users', {
       email: credentials.email,
       password: credentials.password
     }, httpOptions);
   }
 
-  register(cuenta: Cuenta): Observable<any> {
-    return this.http.post(AUTH_API + 'cuentas', {
-      email: cuenta.email,
-      password: cuenta.password,
-      tipo: "cliente"
-    }, httpOptions);
+  register(item: any): Observable<any> {
+    return this.http.post(AUTH_API + 'users', JSON.stringify({
+      email: item.email,
+      password: item.password,
+      tipoCuenta: item.tipoCuenta
+    }), httpOptions);
   }
 
   loggedInStatus(): boolean{
@@ -40,5 +39,9 @@ export class AuthService {
 
   setLoggedInStatus(value: boolean): void {
     this.isLoggedIn = value;
+  }
+
+  getAuthAPI(): string {
+    return AUTH_API;
   }
 }

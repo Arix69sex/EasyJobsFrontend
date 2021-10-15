@@ -4,7 +4,7 @@
 
 <div class="flex flex-row bg-white h-12 border-btm-primary" *ngIf="checkCurrentRoute() != '/'">
   <h3 class="font-main text-3xl ml-5 mr-auto my-auto inline-block align-middle pt-1"><b>EasyJobs</b></h3>
-  <p class="font-strong text-lg my-auto inline-block mr-2.5">Welcome, {{this.userName}}</p>
+  <p class="font-strong text-lg my-auto inline-block mr-2.5" *ngIf="checkIfLoggedIn() == true">Welcome, {{this.userName}}</p>
   <div class="flex flex-row" *ngIf="checkIfLoggedIn() == true">
     <p class="font-strong text-xl my-auto inline-block mr-2.5 align-middle cursor-pointer" (click)="goToHome()">Home</p>
     <p class="font-strong text-xl my-auto inline-block mr-2.5 align-middle cursor-pointer" (click)="goToProfile()">Profile</p>

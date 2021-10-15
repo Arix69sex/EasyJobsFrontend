@@ -2,9 +2,8 @@ import {AfterContentInit, Component, OnInit} from '@angular/core';
 import {Router} from "@angular/router";
 import {AuthService} from "./services/auth.service";
 import {TokenService} from "./services/token.service";
-import jwtDecode from "jwt-decode";
-import {CuentaService} from "./services/cuenta.service";
-import {Cuenta} from "./models/cuenta";
+import {UserService} from "./services/user.service";
+import {User} from "./models/user";
 
 @Component({
   selector: 'app-root',
@@ -13,11 +12,11 @@ import {Cuenta} from "./models/cuenta";
 })
 export class AppComponent implements AfterContentInit {
   title = 'EasyJobsTailwindFrontend';
-  currentCuenta: Cuenta;
+  currentUser: User;
   userName: string;
 
   constructor(private router: Router,
-              private cuentaService: CuentaService,
+              private userService: UserService,
               private authService: AuthService,
               private tokenService: TokenService) {
   }
